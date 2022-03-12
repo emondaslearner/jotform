@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import JotFormReact from 'jotform-react';
 
 function App() {
+  const handleSubmit = () => {
+    console.log('hello')
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <JotFormReact
+      formURL="https://form.jotform.com/220694937171058"
+      formID="211272589254055"
+      onSubmit={handleSubmit}
+      initialHeight={800}
+    />
     </div>
   );
 }
